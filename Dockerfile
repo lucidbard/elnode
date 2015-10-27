@@ -7,5 +7,4 @@ RUN chown emacs /tmp/Dockerfile-install.el
 USER emacs
 ENV HOME /home/emacs
 RUN /usr/local/emacs/bin/emacs -daemon ; /usr/local/emacs/bin/emacsclient -s /tmp/emacs1000/sock/server -e '(load-file "/tmp/Dockerfile-install.el")'
-EXPOSE 8000
 CMD /usr/local/emacs/bin/emacs -daemon ; tail -f /dev/null
